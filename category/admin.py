@@ -11,4 +11,3 @@ class AdminCategory(admin.ModelAdmin):
     ordering =('category_name',)
     list_per_page = 2
 
-# admin.site.register(Category, AdminCategory)
