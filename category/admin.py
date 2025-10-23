@@ -9,5 +9,5 @@ class AdminCategory(admin.ModelAdmin):
     prepopulated_fields = { 'slug': ('category_name', )}
     # auto fill slug when you type category name
     ordering =('category_name',)
-    list_per_page = 2
+    list_per_page = 20
 

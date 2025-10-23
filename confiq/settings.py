@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     # manually added apps 
     'category',
     'account',
+    'store',
     
 ]
 
@@ -72,6 +73,11 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = "confiq.wsgi.application"
+
+# AUTH_USER_MODEL = 'account.account'
+AUTH_USER_MODEL = 'account.user'
+
+# first account is the app name and second account is the model name
 
 
 # Database
@@ -115,11 +121,20 @@ USE_I18N = True
 
 USE_TZ = True
 
+# AUTH_USER_MODEL = 'accounts.User'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
 STATIC_URL = "static/"
+STATICFILES = BASE_DIR / "static"
+STATIC_ROOT = BASE_DIR / "staticfiles"
+
+# Media files (Uploaded by users)
+MEDIA_URL = "media/"
+MEDIA_ROOT = BASE_DIR / "media"
+
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
